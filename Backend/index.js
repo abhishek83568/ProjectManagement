@@ -18,7 +18,7 @@ app.use("/user", userRouter);
 app.use("/project", Auth, projectRouter);
 app.use("/status", Auth, projectTrackerRouter);
 
-const PORT = process.env.PORT || 7900;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", async (req, res) => {
   try {
@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.listen(PORT, async () => {
+app.listen(PORT, "0.0.0.0", async () => {
   try {
     await connection;
     console.log(

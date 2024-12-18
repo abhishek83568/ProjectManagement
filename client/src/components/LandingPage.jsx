@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -94,8 +94,7 @@ const LandingPage = () => {
 
           <input type="submit" value="Register" id="submit" />
           <p>
-            Already Registered ?{" "}
-            <button onClick={() => navigate("/login")}>Login Now</button>
+            Already Registered ? <Link to="/login">Login Now</Link>
           </p>
         </form>
       </div>

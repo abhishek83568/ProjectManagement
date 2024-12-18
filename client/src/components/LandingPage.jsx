@@ -95,7 +95,7 @@ const LandingPage = () => {
           <input type="submit" value="Register" id="submit" />
           <p>
             Already Registered ?{" "}
-            <button onClick={navigate("/login")}>Login Now</button>
+            <button onClick={() => navigate("/login")}>Login Now</button>
           </p>
         </form>
       </div>

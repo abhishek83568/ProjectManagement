@@ -134,7 +134,6 @@ projectRouter.get(
   }
 );
 
-// projectRouter.patch(
 //   "/update-projectDesc/:id",
 //   Authorize("employer"),
 //   async (req, res) => {

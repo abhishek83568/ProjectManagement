@@ -17,7 +17,7 @@ const EmployerPage = () => {
   const fetchEmployee = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/get-myProject`,
+        `https://projectmanagement-l4e1.onrender.com/project/get-myProject`,
         {
           method: "GET",
           headers: {
@@ -39,7 +39,7 @@ const EmployerPage = () => {
   const deleteProject = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/delete-project/${id}`,
+        `https://projectmanagement-l4e1.onrender.com/project/delete-project/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -59,13 +59,16 @@ const EmployerPage = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch(`http://localhost:7453/user/logout`, {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://projectmanagement-l4e1.onrender.com/user/logout`,
+        {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {

@@ -19,16 +19,19 @@ const LandingPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await fetch("http://localhost:7453/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: login.email,
-          password: login.password,
-        }),
-      });
+      const res = await fetch(
+        "https://projectmanagement-l4e1.onrender.com/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: login.email,
+            password: login.password,
+          }),
+        }
+      );
 
       const data = await res.json();
 

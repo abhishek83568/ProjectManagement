@@ -25,7 +25,7 @@ const CreateProject = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:7453/project/create-project`,
+        `https://projectmanagement-l4e1.onrender.com/project/create-project`,
         {
           method: "POST",
           headers: {
@@ -57,7 +57,7 @@ const CreateProject = () => {
   const fetchEmployee = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/get-unassignedEmployee`,
+        `https://projectmanagement-l4e1.onrender.com/project/get-unassignedEmployee`,
         {
           method: "GET",
           headers: {

@@ -15,7 +15,7 @@ const TrackProject = () => {
   const fetchProject = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/get-trackProject/${id}`,
+        `https://projectmanagement-l4e1.onrender.com/project/get-trackProject/${id}`,
         {
           method: "GET",
           headers: {
@@ -38,7 +38,7 @@ const TrackProject = () => {
   const fetchStatus = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/status/get-status/${id}`,
+        `https://projectmanagement-l4e1.onrender.com/status/get-status/${id}`,
         {
           method: "GET",
           headers: {
@@ -66,7 +66,7 @@ const TrackProject = () => {
   const giveMarks = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/status/update-marks/${id}`,
+        `https://projectmanagement-l4e1.onrender.com/status/update-marks/${id}`,
         {
           method: "PATCH",
           headers: {

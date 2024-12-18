@@ -22,7 +22,7 @@ const EditProject = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:7453/project/update-projectDesc/${id}`,
+        `https://projectmanagement-l4e1.onrender.com/project/update-projectDesc/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -49,7 +49,7 @@ const EditProject = () => {
   const fetchEmployee = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/get-unassignedEmployee`,
+        `https://projectmanagement-l4e1.onrender.com/project/get-unassignedEmployee`,
         {
           method: "GET",
           headers: {

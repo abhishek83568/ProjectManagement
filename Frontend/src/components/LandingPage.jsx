@@ -20,18 +20,21 @@ const LandingPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch("http://localhost:7453/user/register", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        userName: register.userName,
-        email: register.email,
-        password: register.password,
-        role: register.role,
-      }),
-    });
+    const res = await fetch(
+      "https://projectmanagement-l4e1.onrender.com/user/register",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          userName: register.userName,
+          email: register.email,
+          password: register.password,
+          role: register.role,
+        }),
+      }
+    );
     const data = await res.json();
     console.log(data);
     if (data) {

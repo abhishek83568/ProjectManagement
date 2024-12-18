@@ -13,7 +13,7 @@ const EmployeePage = () => {
   const fetchProject = async () => {
     try {
       const response = await fetch(
-        `http://localhost:7453/project/get-myEmployeeProject`,
+        `https://projectmanagement-l4e1.onrender.com/project/get-myEmployeeProject`,
         {
           method: "GET",
           headers: {
@@ -36,13 +36,16 @@ const EmployeePage = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch(`http://localhost:7453/user/logout`, {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://projectmanagement-l4e1.onrender.com/user/logout`,
+        {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {
@@ -58,7 +61,7 @@ const EmployeePage = () => {
   const handleAcceptance = async () => {
     try {
       const response = await fetch(
-        "http://localhost:7453/project/update-assignProject",
+        "https://projectmanagement-l4e1.onrender.com/project/update-assignProject",
         {
           method: "PATCH",
           headers: {
@@ -79,7 +82,7 @@ const EmployeePage = () => {
   const handleStatusChange = async (e) => {
     try {
       const response = await fetch(
-        `http://localhost:7453/status/change-status`,
+        `https://projectmanagement-l4e1.onrender.com/status/change-status`,
         {
           method: "POST",
           headers: {
@@ -100,13 +103,16 @@ const EmployeePage = () => {
 
   const getMarks = async () => {
     try {
-      const response = await fetch(`http://localhost:7453/status/get-marks`, {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://projectmanagement-l4e1.onrender.com/status/get-marks`,
+        {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await response.json();
       if (response.ok && data.marks !== undefined) {
